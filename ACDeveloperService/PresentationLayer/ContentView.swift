@@ -10,43 +10,51 @@ import ZIPFoundation
 
 struct ContentView: View {
     
-    @State var filePath: String?
-    @State var isError: Bool = false
-    var error: Error?
-    let templateService = XcodeProjectCreator()
-    
     var body: some View {
-        HStack {
-            Button("Create project") {
-                self.test()
-            }
-        }
-        .alert(self.error?.localizedDescription ?? "Some error", isPresented: self.$isError, actions: {
-            Text("dfdfdfgd")
-        })
-        .frame(width: 500, height: 500)
-      }
+        MainView()
+            .frame(minWidth: 700, minHeight: 300)
+    }
+    
+//    @State var filePath: String?
+//    @State var isError: Bool = false
+//    var error: Error?
+//    let templateService = TemplateService()
+    
+//    var body: some View {
+//        HStack {
+//            Button("Create project") {
+//                self.test()
+//            }
+//        }
+//        .alert(self.error?.localizedDescription ?? "Some error", isPresented: self.$isError, actions: {
+//            Text("dfdfdfgd")
+//        })
+//        .frame(width: 500, height: 500)
+//        .onAppear {
+//            self.templateService.getTemplates()
+//        }
+//      }
 }
 
-private extension ContentView {
+//private extension ContentView {
     
-    func test() {
-        let openPanel = NSOpenPanel()
-        openPanel.message = "Select folder"
-        openPanel.prompt = "Create project"
-        openPanel.canChooseFiles = false
-        openPanel.canChooseDirectories = true
-        openPanel.canCreateDirectories = true
-        
-        openPanel.begin { response in
-            guard response == .OK, let url = openPanel.url else { return }
-            
-            do {
-                try self.templateService.run(url: url)
-            } catch {
-                self.isError = true
-            }
-        }
+//    func test() {
+//        let openPanel = NSOpenPanel()
+//        openPanel.message = "Select folder"
+//        openPanel.prompt = "Create project"
+//        openPanel.canChooseFiles = false
+//        openPanel.canChooseDirectories = true
+//        openPanel.canCreateDirectories = true
+//
+//        openPanel.begin { response in
+//            guard response == .OK, let url = openPanel.url else { return }
+//
+//            do {
+//                try self.templateService.run(url: url)
+//            } catch {
+//                self.isError = true
+//            }
+//        }
         
         
         
@@ -77,9 +85,9 @@ private extension ContentView {
 //            }
 //        }
 //        }
-    }
+//    }
     
-}
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

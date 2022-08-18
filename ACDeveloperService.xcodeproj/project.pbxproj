@@ -8,31 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		E21076E428AE53990056C05C /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = E21076E328AE53990056C05C /* ZIPFoundation */; };
-		E2323F0928AE671E004EC7AC /* XcodeProjectCreatorError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F0828AE671E004EC7AC /* XcodeProjectCreatorError.swift */; };
+		E2323F0928AE671E004EC7AC /* TemmplateServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F0828AE671E004EC7AC /* TemmplateServiceError.swift */; };
 		E2323F4528AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip in Resources */ = {isa = PBXBuildFile; fileRef = E2323F4428AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip */; };
 		E2323F4728AE7E04004EC7AC /* XcodeProjectRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */; };
 		E245412A28AE609A00400943 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245412928AE609A00400943 /* FileManager+Extensions.swift */; };
-		E26837AA28AE6352008EF184 /* XcodeProjectCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26837A928AE6352008EF184 /* XcodeProjectCreator.swift */; };
+		E26837AA28AE6352008EF184 /* TemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26837A928AE6352008EF184 /* TemplateService.swift */; };
+		E26F142328AEABC8008DB090 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F142228AEABC8008DB090 /* MainView.swift */; };
+		E26F142528AEAEFE008DB090 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F142428AEAEFE008DB090 /* MainViewModel.swift */; };
+		E26F142928AEAF59008DB090 /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F142828AEAF59008DB090 /* AppViewModel.swift */; };
+		E26F142B28AEB100008DB090 /* MainItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F142A28AEB100008DB090 /* MainItemView.swift */; };
+		E26F142D28AEB7B1008DB090 /* MainItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F142C28AEB7B1008DB090 /* MainItemModel.swift */; };
+		E26F142F28AEC408008DB090 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26F142E28AEC408008DB090 /* AppDelegate.swift */; };
 		E2E28EBB28AD1A24001255EC /* ACDeveloperServiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E28EBA28AD1A24001255EC /* ACDeveloperServiceApp.swift */; };
 		E2E28EBD28AD1A24001255EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E28EBC28AD1A24001255EC /* ContentView.swift */; };
 		E2E28EBF28AD1A25001255EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E28EBE28AD1A25001255EC /* Assets.xcassets */; };
 		E2E28EC228AD1A25001255EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E28EC128AD1A25001255EC /* Preview Assets.xcassets */; };
-		E2E28ECA28AD1CE9001255EC /* test_archive.zip in Resources */ = {isa = PBXBuildFile; fileRef = E2E28EC928AD1CE9001255EC /* test_archive.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E2323F0828AE671E004EC7AC /* XcodeProjectCreatorError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectCreatorError.swift; sourceTree = "<group>"; };
+		E2323F0828AE671E004EC7AC /* TemmplateServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemmplateServiceError.swift; sourceTree = "<group>"; };
 		E2323F4428AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = PROJECT_UIKIT_1.0.0.zip; sourceTree = "<group>"; };
 		E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectRenamer.swift; sourceTree = "<group>"; };
 		E245412928AE609A00400943 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
-		E26837A928AE6352008EF184 /* XcodeProjectCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectCreator.swift; sourceTree = "<group>"; };
+		E26837A928AE6352008EF184 /* TemplateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateService.swift; sourceTree = "<group>"; };
+		E26F142228AEABC8008DB090 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		E26F142428AEAEFE008DB090 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		E26F142828AEAF59008DB090 /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		E26F142A28AEB100008DB090 /* MainItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemView.swift; sourceTree = "<group>"; };
+		E26F142C28AEB7B1008DB090 /* MainItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItemModel.swift; sourceTree = "<group>"; };
+		E26F142E28AEC408008DB090 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2E28EB728AD1A24001255EC /* ACDeveloperService.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACDeveloperService.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E28EBA28AD1A24001255EC /* ACDeveloperServiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDeveloperServiceApp.swift; sourceTree = "<group>"; };
 		E2E28EBC28AD1A24001255EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E2E28EBE28AD1A25001255EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2E28EC128AD1A25001255EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2E28EC328AD1A25001255EC /* ACDeveloperService.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ACDeveloperService.entitlements; sourceTree = "<group>"; };
-		E2E28EC928AD1CE9001255EC /* test_archive.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = test_archive.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +68,9 @@
 		E245412C28AE60C000400943 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E26F142728AEAF50008DB090 /* Reuse */,
 				E2E28EBC28AD1A24001255EC /* ContentView.swift */,
+				E26F142628AEAF11008DB090 /* Main */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -66,8 +78,8 @@
 		E245412D28AE60D100400943 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E26837A928AE6352008EF184 /* XcodeProjectCreator.swift */,
-				E2323F0828AE671E004EC7AC /* XcodeProjectCreatorError.swift */,
+				E26837A928AE6352008EF184 /* TemplateService.swift */,
+				E2323F0828AE671E004EC7AC /* TemmplateServiceError.swift */,
 				E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */,
 			);
 			path = ServiceLayer;
@@ -93,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				E2323F4428AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip */,
-				E2E28EC928AD1CE9001255EC /* test_archive.zip */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -112,8 +123,28 @@
 			isa = PBXGroup;
 			children = (
 				E2E28EBA28AD1A24001255EC /* ACDeveloperServiceApp.swift */,
+				E26F142E28AEC408008DB090 /* AppDelegate.swift */,
 			);
 			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		E26F142628AEAF11008DB090 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E26F142C28AEB7B1008DB090 /* MainItemModel.swift */,
+				E26F142A28AEB100008DB090 /* MainItemView.swift */,
+				E26F142228AEABC8008DB090 /* MainView.swift */,
+				E26F142428AEAEFE008DB090 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E26F142728AEAF50008DB090 /* Reuse */ = {
+			isa = PBXGroup;
+			children = (
+				E26F142828AEAF59008DB090 /* AppViewModel.swift */,
+			);
+			path = Reuse;
 			sourceTree = "<group>";
 		};
 		E2E28EAE28AD1A24001255EC = {
@@ -220,7 +251,6 @@
 				E2323F4528AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip in Resources */,
 				E2E28EC228AD1A25001255EC /* Preview Assets.xcassets in Resources */,
 				E2E28EBF28AD1A25001255EC /* Assets.xcassets in Resources */,
-				E2E28ECA28AD1CE9001255EC /* test_archive.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,11 +262,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E245412A28AE609A00400943 /* FileManager+Extensions.swift in Sources */,
-				E26837AA28AE6352008EF184 /* XcodeProjectCreator.swift in Sources */,
+				E26F142328AEABC8008DB090 /* MainView.swift in Sources */,
+				E26F142928AEAF59008DB090 /* AppViewModel.swift in Sources */,
+				E26837AA28AE6352008EF184 /* TemplateService.swift in Sources */,
+				E26F142F28AEC408008DB090 /* AppDelegate.swift in Sources */,
 				E2E28EBD28AD1A24001255EC /* ContentView.swift in Sources */,
 				E2E28EBB28AD1A24001255EC /* ACDeveloperServiceApp.swift in Sources */,
 				E2323F4728AE7E04004EC7AC /* XcodeProjectRenamer.swift in Sources */,
-				E2323F0928AE671E004EC7AC /* XcodeProjectCreatorError.swift in Sources */,
+				E2323F0928AE671E004EC7AC /* TemmplateServiceError.swift in Sources */,
+				E26F142B28AEB100008DB090 /* MainItemView.swift in Sources */,
+				E26F142D28AEB7B1008DB090 /* MainItemModel.swift in Sources */,
+				E26F142528AEAEFE008DB090 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
