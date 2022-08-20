@@ -16,5 +16,6 @@ struct ACDeveloperServiceApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.hiddenTitleBar)
     }
 }

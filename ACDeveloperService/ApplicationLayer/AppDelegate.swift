@@ -17,13 +17,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationWillUpdate(_ notification: Notification) {
-        if let menu = NSApplication.shared.mainMenu {
-            menu.items.removeAll(where: { $0.title == "Edit" })
-            menu.items.removeAll(where: { $0.title == "File" })
-            menu.items.removeAll(where: { $0.title == "Window" })
-            menu.items.removeAll(where: { $0.title == "View" })
-            menu.items.removeAll(where: { $0.title == "Help" })
-        }
+        NSApplication.shared.removeDefaultMenuItems()
     }
     
 }

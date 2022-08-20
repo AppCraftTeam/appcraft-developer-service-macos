@@ -7,16 +7,9 @@
 
 import Foundation
 
-struct TemplateModel {
-    let name: String
-    let fileName: String
-    let fileExtension: String
-    let fileURL: URL
-}
-
 class TemplateService {
     
-    func getTemplates() -> [TemplateModel] {
+    func getTemplates(completion: ContextClosure<[TemplateModel]>){
         let urls = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: nil) ?? []
         
         let result: [TemplateModel] = urls.map { url in
@@ -26,6 +19,7 @@ class TemplateService {
             let fileExtension = String(lastPathComponent.pathExtension)
             
             return .init(
+                id: name,
                 name: name,
                 fileName: fileName,
                 fileExtension: fileExtension,
@@ -33,7 +27,7 @@ class TemplateService {
             )
         }
         
-        return result
+        completion(result)
     }
     
     func run(url: URL) throws {
@@ -46,15 +40,15 @@ class TemplateService {
             let saveUrl = url.appendingPathComponent(projectName, isDirectory: true)
 
             guard !fileManager.fileExists(atPath: saveUrl.path) else {
-                throw TemmplateServiceError.projectAlreadyExists
+                throw TemplateServiceError.projectAlreadyExists
             }
 
             guard let templateUrl = Bundle.main.url(forResource: templateName, withExtension: templateFileExtension) else {
-                throw TemmplateServiceError.templateNoFound
+                throw TemplateServiceError.templateNoFound
             }
 
             guard let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                throw TemmplateServiceError.documentsDirectoryNoFound
+                throw TemplateServiceError.documentsDirectoryNoFound
             }
 
             try fileManager.clearDocumentDirectory()

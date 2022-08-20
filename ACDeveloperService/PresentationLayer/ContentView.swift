@@ -11,7 +11,7 @@ import ZIPFoundation
 struct ContentView: View {
     
     var body: some View {
-        MainView()
+        CreateProjectView()
             .frame(minWidth: 700, minHeight: 300)
     }
     
