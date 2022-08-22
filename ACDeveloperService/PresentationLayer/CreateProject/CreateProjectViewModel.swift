@@ -15,10 +15,7 @@ class CreateProjectViewModel: AppViewModel {
         
         self.templateService.getTemplates { [weak self] templates in
             self?.templates = templates
-            
-            if self?.selectedTemplate == nil {
-                self?.selectedTemplate = templates.first
-            }
+            self?.selectedTemplateId = AppDefaults.lastUsedTemplateId ?? templates.first?.id ?? ""
         }
     }
     
@@ -26,6 +23,29 @@ class CreateProjectViewModel: AppViewModel {
     private let templateService = TemplateService()
     
     @Published var templates: [TemplateModel] = []
-    @Published var selectedTemplate: TemplateModel?
+    
+    @Published var selectedTemplateId: String = "" {
+        didSet { AppDefaults.lastUsedTemplateId = self.selectedTemplateId }
+    }
+    
+    @Published var projectName: String = ""
+    
+    var createProjectAvalible: Bool {
+        self.templates.contains(where: { $0.id == self.selectedTemplateId }) && !self.projectName.isEmpty
+    }
+    
+    // MARK: - Methods
+    func createProject(to url: URL) {
+        guard let template = self.templates.first(where: { $0.id == self.selectedTemplateId }), !self.projectName.isEmpty else { return }
+        
+        self.isLoading = true
+        
+        self.templateService.createProject(from: template, projectName: projectName, to: url, completion: { [weak self] error in
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
+                self?.isLoading = false
+                self?.error = error
+            }
+        })
+    }
     
 }

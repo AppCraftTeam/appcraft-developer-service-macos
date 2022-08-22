@@ -9,5 +9,11 @@ import Foundation
 import Combine
 
 class AppViewModel: ObservableObject {
+    
+    // MARK: - Init
     init() {}
+    
+    // MARK: - Props
+    @Published var error: Error?
+    @Published var isLoading: Bool = false
 }

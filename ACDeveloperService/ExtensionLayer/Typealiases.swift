@@ -9,3 +9,4 @@ import Foundation
 
 typealias Closure = () -> Void
 typealias ContextClosure<T> = (T) -> Void
+typealias ResultClosure<T> = ContextClosure<Result<T, Error>>

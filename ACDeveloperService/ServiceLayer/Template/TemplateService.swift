@@ -30,25 +30,22 @@ class TemplateService {
         completion(result)
     }
     
-    func run(url: URL) throws {
+    func createProject(from template: TemplateModel, projectName: String, to url: URL, completion: @escaping ContextClosure<Error?>) {
         do {
             let fileManager = FileManager.default
-            let templateName = "PROJECT_UIKIT_1.0.0"
-            let templateFileExtension = "zip"
-            let templateFileName = "\(templateName).\(templateFileExtension)"
-            let projectName = "NewProjectName"
+            let templateName = template.name
+            let templateFileExtension = template.fileExtension
+            let templateFileName = template.fileName
             let saveUrl = url.appendingPathComponent(projectName, isDirectory: true)
 
             guard !fileManager.fileExists(atPath: saveUrl.path) else {
-                throw TemplateServiceError.projectAlreadyExists
+                completion(TemplateServiceError.projectAlreadyExists)
+                return
             }
 
             guard let templateUrl = Bundle.main.url(forResource: templateName, withExtension: templateFileExtension) else {
-                throw TemplateServiceError.templateNoFound
-            }
-
-            guard let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
-                throw TemplateServiceError.documentsDirectoryNoFound
+                completion(TemplateServiceError.templateNoFound)
+                return
             }
 
             try fileManager.clearDocumentDirectory()
@@ -57,14 +54,6 @@ class TemplateService {
             let templateDocumentsZipUrl = documentDirectoryUrl.appendingPathComponent(templateFileName)
             let templateDocumentsUnzipUrl = documentDirectoryUrl
             let templateDocumentsFolderUrl = documentDirectoryUrl.appendingPathComponent(templateName)
-
-//            try fileManager.removeIfExists(at: templateDocumentsZipUrl)
-//            try fileManager.removeIfExists(at: templateDocumentsFolderUrl)
-
-            print("templateUrl:", templateUrl)
-            print("templateDocumentsZipUrl:", templateDocumentsZipUrl)
-            print("templateDocumentsUnzipUrl:", templateDocumentsUnzipUrl)
-            print("templateDocumentsFolderUrl:", templateDocumentsFolderUrl)
 
             try fileManager.copyItem(at: templateUrl, to: templateDocumentsZipUrl)
             try fileManager.unzipItem(at: templateDocumentsZipUrl, to: templateDocumentsUnzipUrl)
@@ -75,9 +64,10 @@ class TemplateService {
 
             try fileManager.moveItem(at: templateDocumentsFolderUrl, to: saveUrl)
             try fileManager.clearDocumentDirectory()
-
+            
+            completion(nil)
         } catch {
-            throw error
+            completion(error)
         }
     }
     
