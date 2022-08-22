@@ -9,6 +9,51 @@ import Foundation
 
 class TemplateService {
     
+    // MARK: - Props
+    private let fileManager: FileManager = .default
+    
+    // MARK: - Methods
+    func downloadTemplatesFromGITHUB() {
+        guard let url = URL(string: "https://github.com/AppCraftTeam/appcraft-developer-service-macos/archive/refs/heads/main.zip") else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let task = URLSession.shared.downloadTask(with: request) { url, response, error in
+            guard let fileUrl = url else { return }
+            
+            do {
+                let documentsURL = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
+                let savedURL = documentsURL.appendingPathComponent(fileUrl.lastPathComponent)
+                try FileManager.default.moveItem(at: fileURL, to: savedURL)
+                
+                print("!!! savedURL", savedURL)
+            } catch {
+                print("!!! error", error)
+            }
+            
+        }
+//        let sessionConfig = NSURLSessionConfiguration.defaultSessionConfiguration()
+//                let session = NSURLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
+//                let request = NSMutableURLRequest(URL: URL)
+//                request.HTTPMethod = "GET"
+//                let task = session.dataTaskWithRequest(request, completionHandler: { (data: NSData!, response: NSURLResponse!, error: NSError!) -> Void in
+//                    if (error == nil) {
+//                        // Success
+//                        let statusCode = (response as NSHTTPURLResponse).statusCode
+//                        println("Success: \(statusCode)")
+//
+//                        // This is your file-variable:
+//                        // data
+//                    }
+//                    else {
+//                        // Failure
+//                        println("Failure: %@", error.localizedDescription);
+//                    }
+//                })
+//                task.resume()
+    }
+    
     func getTemplates(completion: ContextClosure<[TemplateModel]>){
         let urls = Bundle.main.urls(forResourcesWithExtension: "zip", subdirectory: nil) ?? []
         

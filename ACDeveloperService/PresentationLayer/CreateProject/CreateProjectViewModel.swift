@@ -10,12 +10,18 @@ import Combine
 
 class CreateProjectViewModel: AppViewModel {
     
+    // MARK: - Init
     override init() {
         super.init()
         
         self.templateService.getTemplates { [weak self] templates in
             self?.templates = templates
-            self?.selectedTemplateId = AppDefaults.lastUsedTemplateId ?? templates.first?.id ?? ""
+            
+            if let last = AppDefaults.lastUsedTemplateId, templates.contains(where: { $0.id == last }) {
+                self?.selectedTemplateId = last
+            } else {
+                self?.selectedTemplateId = templates.first?.id ?? ""
+            }
         }
     }
     

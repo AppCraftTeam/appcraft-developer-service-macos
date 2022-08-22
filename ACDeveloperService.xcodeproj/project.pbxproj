@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		E21076E428AE53990056C05C /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = E21076E328AE53990056C05C /* ZIPFoundation */; };
 		E2323F0928AE671E004EC7AC /* TemplateServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F0828AE671E004EC7AC /* TemplateServiceError.swift */; };
-		E2323F4528AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip in Resources */ = {isa = PBXBuildFile; fileRef = E2323F4428AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip */; };
 		E2323F4728AE7E04004EC7AC /* XcodeProjectRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */; };
 		E245412A28AE609A00400943 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E245412928AE609A00400943 /* FileManager+Extensions.swift */; };
 		E26837AA28AE6352008EF184 /* TemplateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26837A928AE6352008EF184 /* TemplateService.swift */; };
@@ -35,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		E2323F0828AE671E004EC7AC /* TemplateServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateServiceError.swift; sourceTree = "<group>"; };
-		E2323F4428AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = PROJECT_UIKIT_1.0.0.zip; sourceTree = "<group>"; };
 		E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectRenamer.swift; sourceTree = "<group>"; };
 		E245412928AE609A00400943 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		E26837A928AE6352008EF184 /* TemplateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateService.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				E282F7BF28B3CDE400E39963 /* PROJECT_UIKIT_ios13.zip */,
-				E2323F4428AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2323F4528AE6A65004EC7AC /* PROJECT_UIKIT_1.0.0.zip in Resources */,
 				E2E28EC228AD1A25001255EC /* Preview Assets.xcassets in Resources */,
 				E282F7C028B3CDE400E39963 /* PROJECT_UIKIT_ios13.zip in Resources */,
 				E2E28EBF28AD1A25001255EC /* Assets.xcassets in Resources */,
