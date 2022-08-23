@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E20B802028B4B3DB00449A00 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E20B801E28B4B3DB00449A00 /* README.md */; };
+		E20B802128B4B3DB00449A00 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E20B801F28B4B3DB00449A00 /* LICENSE */; };
 		E21076E428AE53990056C05C /* ZIPFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = E21076E328AE53990056C05C /* ZIPFoundation */; };
 		E2323F0928AE671E004EC7AC /* TemplateServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F0828AE671E004EC7AC /* TemplateServiceError.swift */; };
 		E2323F4728AE7E04004EC7AC /* XcodeProjectRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E20B801E28B4B3DB00449A00 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		E20B801F28B4B3DB00449A00 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		E2323F0828AE671E004EC7AC /* TemplateServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateServiceError.swift; sourceTree = "<group>"; };
 		E2323F4628AE7E04004EC7AC /* XcodeProjectRenamer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectRenamer.swift; sourceTree = "<group>"; };
 		E245412928AE609A00400943 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 		E245412F28AE611400400943 /* SupportLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E20B801F28B4B3DB00449A00 /* LICENSE */,
+				E20B801E28B4B3DB00449A00 /* README.md */,
 				E2E28EC328AD1A25001255EC /* ACDeveloperService.entitlements */,
 			);
 			name = SupportLayer;
@@ -271,7 +277,9 @@
 			files = (
 				E2E28EC228AD1A25001255EC /* Preview Assets.xcassets in Resources */,
 				E282F7C028B3CDE400E39963 /* PROJECT_UIKIT_ios13.zip in Resources */,
+				E20B802028B4B3DB00449A00 /* README.md in Resources */,
 				E2E28EBF28AD1A25001255EC /* Assets.xcassets in Resources */,
+				E20B802128B4B3DB00449A00 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
