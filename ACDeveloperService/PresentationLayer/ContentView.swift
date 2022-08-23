@@ -14,7 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         CreateProjectView()
-            .frame(minWidth: 700, minHeight: 300)
+            .frame(minWidth: 400, minHeight: 300)
             .environmentObject(self.errorPresented)
             .alert(isPresented: self.$errorPresented.error.mappedToBool()) {
                 Alert(
